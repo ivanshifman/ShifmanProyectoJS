@@ -1,8 +1,9 @@
 :root {
-    --color-main: #564611;
+    --color-main: rgb(241, 196, 49);
     --color-white: #ececec;
     --color-gray: #e3e3e3c0;
     --color-red: #961818;
+    --color-black: rgb(37, 7, 7);
 }
 
 *{
@@ -12,4 +13,26 @@
     list-style-type: none;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: var(--color-main);
+}
+
+aside {
+    padding: 2rem;
+    color: var(--color-black);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -1,0 +1,15 @@
+:root {
+    --color-main: #564611;
+    --color-white: #ececec;
+    --color-gray: #e3e3e3c0;
+    --color-red: #961818;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

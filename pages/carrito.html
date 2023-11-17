@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Sinfonix - Comprar</title>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <aside>
+            <header>
+                <h1 class="logo">Sinfonix</h1>
+                <button class="switch" id="switch">
+                    <span><i class="bi bi-brightness-high-fill"></i></span>
+                    <span><i class="bi bi-moon-stars-fill"></i></span>
+                </button>
+            </header>
+            <nav>
+                <ul>
+                    <li>
+                        <a class="boton-menu boton-volver" href="../index.html">
+                            <i class="bi bi-arrow-return-left"></i> Seguir comprando
+                        </a>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito active" href="carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="footer-carrito">
+                <div class="numeros-carrito">
+                    <span class="numero-grande">
+                        <i class="bi bi-1-square-fill"></i>
+                        Compra
+                    </span>
+                    <span class="numero-grande">
+                        <i class="bi bi-2-square-fill"></i>
+                        Envío
+                    </span>
+                </div>
+                <p class="texto-footer">© 2023 Ivan Shifman</p>
+            </footer>
+        </aside>
+
+        <main>
+            <h2 class="titulo-principal">Carrito</h2>
+            <div class="contenedor-carrito">
+                <p class="carrito-vacio">Tu carrito está vacío <i class="bi bi-emoji-frown"></i></p>
+                <div class="carrito-productos">
+
+                    <div class="carrito-producto">
+                        <img src="../img/bateria/bateria1.webp" alt="">
+                        <div class="carrito-producto-titulo">
+                            <small>Título</small>
+                            <h3>Bateria 01</h3>
+                        </div>
+                        <div class="carrito-producto-cantidad">
+                            <small>cantidad</small>
+                            <div class="carrito-control">
+                                <button class="carrito-control">-</button>
+                                <span>1</span>
+                                <button class="carrito-control">+</button>
+                            </div>
+                        </div>
+                        <div class="carrito-producto-precio">
+                            <small>Precio</small>
+                            <p>$1000</p>
+                        </div>
+                        <div class="carrito-producto-subtotal">
+                            <small>Subtotal</small>
+                            <p>$1000</p>
+                        </div>
+                        <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
+                    </div>
+                    <div class="carrito-producto">
+                        <img src="../img/bateria/bateria2.webp" alt="">
+                        <div class="carrito-producto-titulo">
+                            <small>Título</small>
+                            <h3>Bateria 02</h3>
+                        </div>
+                        <div class="carrito-producto-cantidad">
+                            <small>cantidad</small>
+                            <div class="carrito-control">
+                                <button class="carrito-control">-</button>
+                                <span>2</span>
+                                <button class="carrito-control">+</button>
+                            </div>
+                        </div>
+                        <div class="carrito-producto-precio">
+                            <small>Precio</small>
+                            <p>$2000</p>
+                        </div>
+                        <div class="carrito-producto-subtotal">
+                            <small>Subtotal</small>
+                            <p>$2000</p>
+                        </div>
+                        <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
+                    </div>
+
+                </div>
+                <div class="carrito-acciones">
+                    <div class="carrito-acciones-izquierda">
+                        <button class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-comprar">
+                            <p>Total:</p>
+                            <p id="total">$3000</p> 
+                        </div>
+                        <button class="carrito-acciones-comprar">Finalizar compra</button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <form class="formulario">
+                <div class="formulario-input">
+                    <label for="nombre-formulario">Nombre:</label>
+                    <input type="text" name="nombre-formulario" id="nombre-formulario" placeholder="Nombre">
+                    <label for="apellido-formulario">Apellido:</label>
+                    <input type="text" name="apellido-formulario" id="apellido-formulario" placeholder="Apellido">
+                    <label for="numero-formulario">Numero:</label>
+                    <input type="tel" name="numero-formulario" id="numero-formulario" placeholder="Telefono">
+                    <label for="email-formulario">Email:</label>
+                    <input type="email" name="email-formulario" id="email-formulario" placeholder="Email">
+                    <label for="destino-formulario">Destino:</label>
+                    <select name="destino-formulario" id="destino-formulario">
+                        <option value="Argentina">Argentina</option>
+                        <option value="Chile">Chile</option>
+                        <option value="Uruguay">Uruguay</option>
+                    </select>
+                    <button class="boton-formulario" type="button">Comprar</button>
+
+                </div>
+            </form>
+
+        </main>
+
+    </div>
+    
+    <script src="../js/carrito.js"></script>
+</body>
+</html>

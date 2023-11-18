@@ -43,7 +43,8 @@ header {
 }
 
 .logo {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
+    text-decoration: underline;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -112,14 +113,13 @@ header {
     background-color: transparent;
     border: 0;
     color: var(--color-black);
-    font-size: 1rem;
+    font-size: 0.95rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 1rem;
     font-weight: 600;
     padding: 1rem;
-    font-size: .85rem;
 }
 
 .boton-menu.active {
@@ -206,8 +206,9 @@ main {
 }
 
 .titulo-principal {
-    color: var(--color-black);
+    color: var(--color-gray);
     margin-bottom: 2rem;
+    font-size: 1.6rem;
 }
 
 .contenedor-productos {
@@ -230,7 +231,7 @@ main {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: .25rem;
+    gap: .4rem;
 }
 
 .producto-titulo {

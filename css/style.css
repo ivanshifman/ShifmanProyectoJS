@@ -2,7 +2,7 @@
     --color-main: rgb(241, 196, 49);
     --color-white: #ececec;
     --color-gray: rgb(4, 56, 50);
-    --color-red: #961818;
+    --color-red: rgb(227, 33, 33);
     --color-black: rgb(7, 37, 17);
     --color-graytwo: rgba(230, 230, 230, 0.8);
     --color-green: rgba(15, 238, 34, 0.804);
@@ -120,12 +120,12 @@ header {
     gap: 1rem;
     font-weight: 600;
     padding: 1rem;
+    width: 100%;
 }
 
 .boton-menu.active {
     background-color: var(--color-white);
     color: var(--color-main);
-    width: 100%;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     position: relative;
@@ -183,26 +183,17 @@ main {
     padding: 3rem;
 }
 
-
-
-/* editar */
-
-
-
 .buscador {
-    display: flex;
     width: 70vw;
     margin-bottom: 2rem;
 }
 
 .buscador input {
-    width: 80%;
-}
-
-.buscador label {
-    color: var(--color-white);
-    background: var(--color-black);
-    cursor: pointer;
+    width: 100%;
+    border-radius: 1rem;
+    padding: .5rem;
+    outline: 0;
+    border: 2px solid var(--color-black);
 }
 
 .titulo-principal {
@@ -266,7 +257,26 @@ main {
     margin-right: 2rem;
 }
 
-/*SEGUIR EDITANDO*/
+.numero-grande {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numero-grande span {
+    margin-bottom: .5rem;
+    padding: 1rem;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: var(--color-black);
+    border-radius: 1.5rem;
+}
+
+.numero-grande.active span {
+    background-color: var(--color-graytwo);
+    border: 2px solid var(--color-black);
+}
+
 .contenedor-carrito {
     display: flex;
     flex-direction: column;
@@ -319,21 +329,22 @@ main {
 .carrito-control {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .carrito-control-boton {
-    background-color: transparent;
+    background-color: var(--color-graytwo);
     border: 0;
+    cursor: pointer;
 }
 
 .carrito-control-signo {
-    color: var(--color-graytwo);
+    color: var(--color-gray);
     background-color: var(--color-graytwo);
     font-size: 1rem;
-    z-index: 3;
+    z-index: 1;
+    font-weight: 800;
 }
-/* EDITARRRRRR */
-
 
 .carrito-acciones {
     display: flex;
@@ -348,6 +359,10 @@ main {
     color: var(--color-graytwo);
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.carrito-acciones-vaciar:hover {
+    background-color: #961818;
 }
 
 .carrito-acciones-derecha {
@@ -374,6 +389,10 @@ main {
     cursor: pointer;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
+}
+
+.carrito-acciones-comprar:hover {
+    background-color: rgb(16, 178, 16);
 }
 /*
 .disabled {

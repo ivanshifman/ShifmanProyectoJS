@@ -34,11 +34,11 @@
             </nav>
             <footer class="footer-carrito">
                 <div class="numeros-carrito">
-                    <span class="numero-grande active">
+                    <span id="span-aside-uno" class="numero-grande active">
                         <span>1</span>
                         Compra
                     </span>
-                    <span class="numero-grande">
+                    <span id="span-aside-dos" class="numero-grande">
                         <span>2</span>
                         Envío
                     </span>
@@ -50,73 +50,26 @@
         <main>
             <h2 class="titulo-principal">Carrito</h2>
             <div class="contenedor-carrito">
-                <p class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
-                <div class="carrito-productos disabled">
+                <p id="carrito-vacio" class="carrito-vacio">Tu carrito está vacío. <i class="bi bi-emoji-frown"></i></p>
 
-                    <div class="carrito-producto">
-                        <img class="carrito-producto-imagen" src="../img/bateria/bateria1.webp" alt="">
-                        <div class="carrito-producto-titulo">
-                            <small>Título</small>
-                            <h3>Bateria 01</h3>
-                        </div>
-                        <div class="carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <div class="carrito-control">
-                                <button class="carrito-control-boton"><span class="carrito-control-signo">-</span></button>
-                                <span>1</span>
-                                <button class="carrito-control-boton"><span class="carrito-control-signo">+</span></button>
-                            </div>
-                        </div>
-                        <div class="carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$1000</p>
-                        </div>
-                        <div class="carrito-producto-subtotal">
-                            <small>Subtotal</small>
-                            <p>$1000</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
-                    </div>
-                    <div class="carrito-producto">
-                        <img class="carrito-producto-imagen" src="../img/bateria/bateria2.webp" alt="">
-                        <div class="carrito-producto-titulo">
-                            <small>Título</small>
-                            <h3>Bateria 02</h3>
-                        </div>
-                        <div class="carrito-producto-cantidad">
-                            <small>Cantidad</small>
-                            <div class="carrito-control">
-                                <button class="carrito-control-boton"><span class="carrito-control-signo">-</span></button>
-                                <span>2</span>
-                                <button class="carrito-control-boton"><span class="carrito-control-signo">+</span></button>
-                            </div>
-                        </div>
-                        <div class="carrito-producto-precio">
-                            <small>Precio</small>
-                            <p>$2000</p>
-                        </div>
-                        <div class="carrito-producto-subtotal">
-                            <small>Subtotal</small>
-                            <p>$2000</p>
-                        </div>
-                        <button class="carrito-producto-eliminar"><i class="bi bi-trash-fill"></i></button>
-                    </div>
-
+                <div id="carrito-productos" class="carrito-productos disabled">
+                <!--Se rellena con JS los productos elegidos-->
                 </div>
-                <div class="carrito-acciones disabled">
+
+                <div id="carrito-acciones" class="carrito-acciones disabled">
                     <div class="carrito-acciones-izquierda">
-                        <button class="carrito-acciones-vaciar">Vaciar carrito</button>
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">Vaciar carrito</button>
                     </div>
                     <div class="carrito-acciones-derecha">
                         <div class="carrito-acciones-total">
                             <p>Total:</p>
                             <p id="total">$3000</p> 
                         </div>
-                        <button class="carrito-acciones-comprar">Finalizar compra</button>
+                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">Finalizar compra</button>
                     </div>
                 </div>
                 
-                <p class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
+                <p id="carrito-comprado" class="carrito-comprado disabled">Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i></p>
 
             </div>
 

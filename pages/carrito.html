@@ -78,19 +78,20 @@
                 <div class="formulario-div">
 
                     <label for="nombre-formulario">Nombre:</label>
-                    <input type="text" name="nombre-formulario" id="nombre-formulario" placeholder="Nombre">
+                    <input type="text" name="nombre-formulario" id="nombre-formulario" placeholder="Nombre" required>
                     <label for="apellido-formulario">Apellido:</label>
-                    <input type="text" name="apellido-formulario" id="apellido-formulario" placeholder="Apellido">
+                    <input type="text" name="apellido-formulario" id="apellido-formulario" placeholder="Apellido" required>
                     <label for="numero-formulario">Numero:</label>
-                    <input type="tel" name="numero-formulario" id="numero-formulario" placeholder="Telefono">
+                    <input type="tel" name="numero-formulario" id="numero-formulario" placeholder="Telefono" required>
                     <label for="email-formulario">Email:</label>
-                    <input type="email" name="email-formulario" id="email-formulario" placeholder="Email">
+                    <input type="email" name="email-formulario" id="email-formulario" placeholder="Email" required>
                     <label for="destino-formulario">Destino:</label>
                     <select name="destino-formulario" id="destino-formulario">
                         <option value="Argentina">Argentina</option>
                         <option value="Chile">Chile</option>
                         <option value="Uruguay">Uruguay</option>
                     </select>
+                    <div id="mensaje-validacion" class="mensaje-validacion"></div>
                     <button class="boton-formulario" type="button">Comprar</button>
 
                 </div>

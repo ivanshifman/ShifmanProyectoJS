@@ -529,6 +529,12 @@ body.dark .formulario-div label{
     color: var(--color-gray);
 }
 
+.mensaje-validacion {
+    font-size: 1rem;
+    color: var(--color-red);
+    text-align: center;
+}
+
 .boton-formulario {
     font-size: 1.1rem;
     padding: .6rem;

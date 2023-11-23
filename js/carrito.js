@@ -19,9 +19,12 @@ const formulario = document.querySelector(".formulario");
 const botonFormulario = document.querySelector(".boton-formulario");
 
 
-
+// Carga de productos al carrito
 function cargarProductosCarrito() {
     if (productosEnCarrito && productosEnCarrito.length > 0) {
+
+        productosEnCarrito.sort((a, b) => a.titulo.toLowerCase() > b.titulo.toLowerCase() ? 1 : -1);
+
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoAcciones.classList.remove("disabled");
@@ -41,9 +44,9 @@ function cargarProductosCarrito() {
                 <div class="carrito-producto-cantidad">
                     <small>Cantidad</small>
                     <div class="carrito-control">
-                        <button class="carrito-control-boton carrito-control-menos"><span class="carrito-control-signo">-</span></button>
+                        <button class="carrito-control-boton carrito-control-menos" data-id="${producto.id}" ><span class="carrito-control-signo">-</span></button>
                         <span class="contador-cantidad">${producto.cantidad}</span>
-                        <button class="carrito-control-boton carrito-control-mas"><span class="carrito-control-signo">+</span></button>
+                        <button class="carrito-control-boton carrito-control-mas" data-id="${producto.id}"><span class="carrito-control-signo">+</span></button>
                     </div>
                 </div>
                 <div class="carrito-producto-precio">
@@ -69,6 +72,7 @@ function cargarProductosCarrito() {
     }
 
     actualizarBotonesEliminar();
+    actualizarBotonesCantidad();
     actualizarTotal();
 }
 
@@ -91,6 +95,43 @@ function eliminarDelCarrito(e) {
     cargarProductosCarrito();
 
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+}
+
+// Actualizar cantidad por cada producto
+function actualizarBotonesCantidad() {
+    cantidadMenos = document.querySelectorAll(".carrito-control-menos");
+    cantidadCarrito = document.querySelectorAll(".contador-cantidad");
+    cantidadMas = document.querySelectorAll(".carrito-control-mas");
+
+    cantidadMas.forEach(mas => {
+        mas.addEventListener("click", sumarCantidad)
+    });
+
+    cantidadMenos.forEach(mas => {
+        mas.addEventListener("click", restarCantidad)
+    });
+}
+// Suma productos dentro del carrito
+function sumarCantidad(e) {
+    const idProducto = e.currentTarget.dataset.id;
+    const producto = productosEnCarrito.find(p => p.id === idProducto);
+
+    if (producto) {
+        producto.cantidad++;
+        cargarProductosCarrito();
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    }
+}
+// Resta productos dentro del carrito
+function restarCantidad(e) {
+    const idProducto = e.currentTarget.dataset.id;
+    const producto = productosEnCarrito.find(p => p.id === idProducto);
+
+    if (producto && producto.cantidad > 1) {
+        producto.cantidad--;
+        cargarProductosCarrito();
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    }
 }
 
 // Vaciar el carrito
@@ -125,7 +166,23 @@ function comprarCarrito() {
 
 //Finalizar compra
 botonFormulario.addEventListener("click", finalizarCompra);
+
 function finalizarCompra() {
+
+    const nombre = document.getElementById("nombre-formulario").value;
+    const apellido = document.getElementById("apellido-formulario").value;
+    const numero = document.getElementById("numero-formulario").value;
+    const email = document.getElementById("email-formulario").value;
+    const destino = document.getElementById("destino-formulario").value;
+    const mensajeValidacion = document.getElementById("mensaje-validacion");
+
+    mensajeValidacion.innerHTML = "";
+
+    if (!nombre || !apellido || !numero || !email || !destino) {
+        mensajeValidacion.innerText = "Todos los campos del formulario son obligatorios. Por favor, complétalos antes de finalizar la compra.";
+        return;
+    }
+
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 

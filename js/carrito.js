@@ -107,8 +107,8 @@ function actualizarBotonesCantidad() {
         mas.addEventListener("click", sumarCantidad)
     });
 
-    cantidadMenos.forEach(mas => {
-        mas.addEventListener("click", restarCantidad)
+    cantidadMenos.forEach(menos => {
+        menos.addEventListener("click", restarCantidad)
     });
 }
 // Suma productos dentro del carrito

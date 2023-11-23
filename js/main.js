@@ -12,7 +12,7 @@ class Producto {
 }
 // PRODUCTOS
 const productos = [
-    new Producto("bateria-01", "Bateria 01", "../img/bateria/bateria1.webp", { nombre: "Baterias", id: "baterias" }, 1500),
+    new Producto("bateria-01", "Bateria 01", "../img/bateria/bateria1.webp", { nombre: "Baterias", id: "baterias" }, 4500),
     new Producto("bateria-02", "Bateria 02", "../img/bateria/bateria2.webp", { nombre: "Baterias", id: "baterias" }, 3000),
     new Producto("bateria-03", "Bateria 03", "../img/bateria/bateria3.webp", { nombre: "Baterias", id: "baterias" }, 2000),
     new Producto("bateria-04", "Bateria 04", "../img/bateria/bateria4.webp", { nombre: "Baterias", id: "baterias" }, 4500),
@@ -23,7 +23,7 @@ const productos = [
     new Producto("bateria-09", "Bateria 09", "../img/bateria/bateria9.webp", { nombre: "Baterias", id: "baterias" }, 2000),
     new Producto("bateria-10", "Bateria 10", "../img/bateria/bateria10.webp", { nombre: "Baterias", id: "baterias" }, 1550),
     new Producto("bateria-11", "Bateria 11", "../img/bateria/bateria11.webp", { nombre: "Baterias", id: "baterias" }, 5000),
-    new Producto("bateria-12", "Bateria 12", "../img/bateria/bateria12.webp", { nombre: "Baterias", id: "baterias" }, 2700),
+    new Producto("bateria-12", "Bateria 12", "../img/bateria/bateria12.webp", { nombre: "Baterias", id: "baterias" }, 22700),
     new Producto("guitarra-01", "Guitarra 01", "../img/guitarra/guitarra1.webp", { nombre: "Guitarras", id: "guitarras" }, 6700),
     new Producto("guitarra-02", "Guitarra 02", "../img/guitarra/guitarra2.webp", { nombre: "Guitarras", id: "guitarras" }, 3800),
     new Producto("guitarra-03", "Guitarra 03", "../img/guitarra/guitarra3.webp", { nombre: "Guitarras", id: "guitarras" }, 4000),

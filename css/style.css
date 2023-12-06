@@ -5,6 +5,7 @@
     --color-red: rgb(227, 33, 33);
     --color-black: rgb(7, 37, 17);
     --color-graytwo: rgba(230, 230, 230, 0.8);
+    --color-graythree: rgb(230, 230, 230);
     --color-green: rgba(15, 238, 34, 0.804);
     --color-greentwo: rgb(42, 99, 44);
     --color-greenthree: rgb(12, 173, 66);
@@ -471,7 +472,7 @@ body.dark .carrito-comprado {
 }
 
 .swal2-popup {
-    background-color: var(--color-graytwo) !important;
+    background-color: var(--color-graythree) !important;
     border: 6px solid var(--color-red) !important;
 }
 

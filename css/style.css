@@ -7,6 +7,7 @@
     --color-graytwo: rgba(230, 230, 230, 0.8);
     --color-green: rgba(15, 238, 34, 0.804);
     --color-greentwo: rgb(42, 99, 44);
+    --color-greenthree: rgb(12, 173, 66);
     --color-darkbody: rgb(181, 2, 2);
 }
 
@@ -467,6 +468,94 @@ body.dark .carrito-comprado {
 
 .carrito-acciones-comprar:hover {
     background-color: rgb(16, 178, 16);
+}
+
+.swal2-popup {
+    background-color: var(--color-graytwo) !important;
+    border: 6px solid var(--color-red) !important;
+}
+
+body.dark .swal2-popup {
+    background-color: var(--color-gray) !important;
+    border: 6px solid var(--color-green) !important;
+}
+
+.iconoAlertaUno {
+    background-color: transparent !important;
+    border-color: var(--color-red) !important;
+    z-index: 1 !important;
+}
+
+.iconoAlertaUno .swal2-icon-content {
+    color: var(--color-red) !important;
+    z-index: 2 !important;
+}
+
+body.dark .iconoAlertaUno {
+    background-color: transparent !important;
+    border-color: var(--color-green) !important;
+    z-index: 1 !important;
+}
+
+body.dark .iconoAlertaUno .swal2-icon-content {
+    color: var(--color-green) !important;
+    z-index: 2 !important;
+}
+
+.tituloAlerta {
+    color: var(--color-red) !important;
+}
+
+body.dark .tituloAlerta {
+    color: var(--color-green) !important;
+}
+
+.textoAlerta {
+    color: var(--color-red) !important;
+}
+
+body.dark .textoAlerta {
+    color: var(--color-green) !important;
+}
+
+.swal2-close {
+    color: var(--color-red) !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+body.dark .swal2-close {
+    color: var(--color-green) !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.swal2-close:focus {
+    background-color: transparent !important;
+}
+
+.confirmarAlerta {
+    background-color: var(--color-greenthree) !important;
+    padding-block: .5rem !important;
+    color: var(--color-white) !important;
+    border: 2px solid var(--color-greenthree) !important;
+    font-size: .7rem;
+}
+
+.confirmarAlerta:hover {
+    background-color: var(--color-greentwo) !important;
+}
+
+.cancelarAlerta {
+    background-color: var(--color-red) !important;
+    padding-block: .5rem !important;
+    color: var(--color-white) !important;
+    border: 2px solid var(--color-red) !important;
+    font-size: .7rem;
+}
+
+.cancelarAlerta:hover {
+    background-color: var(--color-darkbody) !important;
 }
 
 .formulario {

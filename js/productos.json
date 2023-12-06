@@ -1,0 +1,308 @@
+[
+    {
+        "id": "bateria-01",
+        "titulo": "Bateria 01",
+        "imagen": "./img/bateria/bateria1.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 4500
+    },
+    {
+        "id": "bateria-02",
+        "titulo": "Bateria 02",
+        "imagen": "./img/bateria/bateria2.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 3000
+    },
+    {
+        "id": "bateria-03",
+        "titulo": "Bateria 03",
+        "imagen": "./img/bateria/bateria3.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 2000
+    },
+    {
+        "id": "bateria-04",
+        "titulo": "Bateria 04",
+        "imagen": "./img/bateria/bateria4.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 2000
+    },
+    {
+        "id": "bateria-05",
+        "titulo": "Bateria 05",
+        "imagen": "./img/bateria/bateria5.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 4500
+    },
+    {
+        "id": "bateria-06",
+        "titulo": "Bateria 06",
+        "imagen": "./img/bateria/bateria6.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 3200
+    },
+    {
+        "id": "bateria-07",
+        "titulo": "Bateria 07",
+        "imagen": "./img/bateria/bateria7.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 1600
+    },
+    {
+        "id": "bateria-08",
+        "titulo": "Bateria 08",
+        "imagen": "./img/bateria/bateria8.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 3050
+    },
+    {
+        "id": "bateria-09",
+        "titulo": "Bateria 09",
+        "imagen": "./img/bateria/bateria9.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 2000
+    },
+    {
+        "id": "bateria-10",
+        "titulo": "Bateria 10",
+        "imagen": "./img/bateria/bateria10.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 1550
+    },
+    {
+        "id": "bateria-11",
+        "titulo": "Bateria 11",
+        "imagen": "./img/bateria/bateria11.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 5000
+    },
+    {
+        "id": "bateria-12",
+        "titulo": "Bateria 12",
+        "imagen": "./img/bateria/bateria12.webp",
+        "categoria": { 
+            "nombre": "Baterias", 
+            "id": "baterias" },
+        "precio": 22700
+    },
+    {
+        "id": "guitarra-01",
+        "titulo": "Guitarra 01",
+        "imagen": "./img/guitarra/guitarra1.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 6700
+    },
+    {
+        "id": "guitarra-02",
+        "titulo": "Guitarra 02",
+        "imagen": "./img/guitarra/guitarra2.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 4000
+    },
+    {
+        "id": "guitarra-03",
+        "titulo": "Guitarra 03",
+        "imagen": "./img/guitarra/guitarra3.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 3800
+    },
+    {
+        "id": "guitarra-04",
+        "titulo": "Guitarra 04",
+        "imagen": "./img/guitarra/guitarra4.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 6700
+    },
+    {
+        "id": "bateria-05",
+        "titulo": "Guitarra 05",
+        "imagen": "./img/guitarra/guitarra5.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 4500
+    },
+    {
+        "id": "bateria-06",
+        "titulo": "Guitarra 06",
+        "imagen": "./img/guitarra/guitarra6.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 3500
+    },
+    {
+        "id": "guitarra-07",
+        "titulo": "Guitarra 07",
+        "imagen": "./img/guitarra/guitarra7.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 6770
+    },
+    {
+        "id": "guitarra-08",
+        "titulo": "Guitarra 08",
+        "imagen": "./img/guitarra/guitarra8.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 3800
+    },
+    {
+        "id": "guitarra-09",
+        "titulo": "Guitarra 09",
+        "imagen": "./img/guitarra/guitarra9.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 2300
+    },
+    {
+        "id": "guitarra-10",
+        "titulo": "Guitarra 10",
+        "imagen": "./img/guitarra/guitarra10.webp",
+        "categoria": { 
+            "nombre": "Guitarras", 
+            "id": "guitarras" },
+        "precio": 3300
+    },
+    {
+        "id": "piano-01",
+        "titulo": "Piano 01",
+        "imagen": "./img/piano/piano1.webp",
+        "categoria": { 
+            "nombre": "Pianos", 
+            "id": "pianos" },
+        "precio": 8800
+    },
+    {
+        "id": "piano-02",
+        "titulo": "Piano 02",
+        "imagen": "./img/piano/piano2.webp",
+        "categoria": { 
+            "nombre": "Pianos", 
+            "id": "pianos" },
+        "precio": 7800
+    },
+    {
+        "id": "piano-03",
+        "titulo": "Piano 03",
+        "imagen": "./img/piano/piano3.webp",
+        "categoria": { 
+            "nombre": "Pianos", 
+            "id": "pianos" },
+        "precio": 8340
+    },
+    {
+        "id": "piano-04",
+        "titulo": "Piano 04",
+        "imagen": "./img/piano/piano4.webp",
+        "categoria": { 
+            "nombre": "Pianos", 
+            "id": "pianos" },
+        "precio": 7100
+    },
+    {
+        "id": "piano-05",
+        "titulo": "Piano 05",
+        "imagen": "./img/piano/piano5.webp",
+        "categoria": { 
+            "nombre": "Pianos", 
+            "id": "pianos" },
+        "precio": 2200
+    },
+    {
+        "id": "piano-06",
+        "titulo": "Piano 06",
+        "imagen": "./img/piano/piano6.webp",
+        "categoria": { 
+            "nombre": "Pianos", 
+            "id": "pianos" },
+        "precio": 4700
+    },
+    {
+        "id": "piano-07",
+        "titulo": "Piano 07",
+        "imagen": "./img/piano/piano7.webp",
+        "categoria": { 
+            "nombre": "Pianos", 
+            "id": "pianos" },
+        "precio": 4600
+    },
+    {
+        "id": "piano-08",
+        "titulo": "Piano 08",
+        "imagen": "./img/piano/piano8.webp",
+        "categoria": { 
+            "nombre": "Pianos", 
+            "id": "pianos" },
+        "precio": 5600
+    },
+    {
+        "id": "viento-01",
+        "titulo": "Viento 01",
+        "imagen": "./img/viento/viento1.webp",
+        "categoria": { 
+            "nombre": "Vientos", 
+            "id": "vientos" },
+        "precio": 1900
+    },
+    {
+        "id": "viento-02",
+        "titulo": "Viento 02",
+        "imagen": "./img/viento/viento2.webp",
+        "categoria": { 
+            "nombre": "Vientos", 
+            "id": "vientos" },
+        "precio": 2300
+    },
+    {
+        "id": "viento-03",
+        "titulo": "Viento 03",
+        "imagen": "./img/viento/viento3.webp",
+        "categoria": { 
+            "nombre": "Vientos", 
+            "id": "vientos" },
+        "precio": 1200
+    },
+    {
+        "id": "viento-04",
+        "titulo": "Viento 04",
+        "imagen": "./img/viento/viento4.webp",
+        "categoria": { 
+            "nombre": "Vientos", 
+            "id": "vientos" },
+        "precio": 1230
+    }
+]

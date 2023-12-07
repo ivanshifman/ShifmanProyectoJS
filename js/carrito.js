@@ -18,6 +18,8 @@ const botonComprar = document.querySelector("#carrito-acciones-comprar");
 const formulario = document.querySelector(".formulario");
 const botonFormulario = document.querySelector(".boton-formulario");
 const contenedorTarjeta = document.querySelector("#contenedor-tarjeta");
+const tarjetaDelantera = document.querySelector("#tarjeta-delantera");
+const tarjetaTrasera = document.querySelector("#tarjeta-trasera");
 const botonTarjeta = document.querySelector("#boton-tarjeta");
 
 
@@ -31,9 +33,9 @@ function cargarProductosCarrito() {
         contenedorCarritoProductos.classList.remove("disabled");
         contenedorCarritoAcciones.classList.remove("disabled");
         contenedorCarritoComprado.classList.add("disabled");
-    
+
         contenedorCarritoProductos.innerHTML = "";
-    
+
         productosEnCarrito.forEach(producto => {
             const div = document.createElement("div");
             div.classList.add("carrito-producto");
@@ -61,11 +63,11 @@ function cargarProductosCarrito() {
                 </div>
                 <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
             `;
-    
+
             contenedorCarritoProductos.append(div);
         })
-    
-    
+
+
     } else {
         contenedorCarritoVacio.classList.remove("disabled");
         contenedorCarritoProductos.classList.add("disabled");
@@ -100,17 +102,17 @@ function eliminarDelCarrito(e) {
         position: "right",
         stopOnFocus: true,
         style: {
-          background: "linear-gradient(to top, rgb(227, 33, 33), rgb(181, 2, 2))",
-          borderRadius: "2rem",
-          textTransform: "uppercase",
-          fontSize: ".8rem"
+            background: "linear-gradient(to top, rgb(227, 33, 33), rgb(181, 2, 2))",
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: ".8rem"
         },
         offset: {
             x: "1.5rem",
             y: "1.5rem"
-          },
-        onClick: function(){}
-      }).showToast();
+        },
+        onClick: function () { }
+    }).showToast();
 
     const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
@@ -145,17 +147,17 @@ function sumarCantidad(e) {
         position: "right",
         stopOnFocus: true,
         style: {
-          background: "linear-gradient(to top, rgba(15, 238, 34, 0.804), rgb(42, 99, 44))",
-          borderRadius: "2rem",
-          textTransform: "uppercase",
-          fontSize: ".8rem"
+            background: "linear-gradient(to top, rgba(15, 238, 34, 0.804), rgb(42, 99, 44))",
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: ".8rem"
         },
         offset: {
             x: "1.5rem",
             y: "1.5rem"
-          },
-        onClick: function(){}
-      }).showToast();
+        },
+        onClick: function () { }
+    }).showToast();
 
     const idProducto = e.currentTarget.dataset.id;
     const producto = productosEnCarrito.find(p => p.id === idProducto);
@@ -177,17 +179,17 @@ function restarCantidad(e) {
         position: "right",
         stopOnFocus: true,
         style: {
-          background: "linear-gradient(to top, rgb(227, 33, 33), rgb(181, 2, 2))",
-          borderRadius: "2rem",
-          textTransform: "uppercase",
-          fontSize: ".8rem"
+            background: "linear-gradient(to top, rgb(227, 33, 33), rgb(181, 2, 2))",
+            borderRadius: "2rem",
+            textTransform: "uppercase",
+            fontSize: ".8rem"
         },
         offset: {
             x: "1.5rem",
             y: "1.5rem"
-          },
-        onClick: function(){}
-      }).showToast();
+        },
+        onClick: function () { }
+    }).showToast();
 
     const idProducto = e.currentTarget.dataset.id;
     const producto = productosEnCarrito.find(p => p.id === idProducto);
@@ -219,14 +221,14 @@ function vaciarCarrito() {
             icon: 'iconoAlertaUno',
             confirmButton: 'confirmarAlerta',
             cancelButton: 'cancelarAlerta',
-          }
-      }).then((result) => {
+        }
+    }).then((result) => {
         if (result.isConfirmed) {
             productosEnCarrito.length = 0;
             localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
             cargarProductosCarrito();
         }
-      });
+    });
 }
 
 // Actualizar valor total
@@ -254,12 +256,12 @@ function comprarCarrito() {
             icon: 'iconoAlertaUno',
             confirmButton: 'confirmarAlerta',
             cancelButton: 'cancelarAlerta',
-          }
-      }).then((result) => {
+        }
+    }).then((result) => {
         if (result.isConfirmed) {
             productosEnCarrito.length = 0;
             localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-        
+
             contenedorCarritoVacio.classList.add("disabled");
             contenedorCarritoProductos.classList.add("disabled");
             contenedorCarritoAcciones.classList.add("disabled");
@@ -269,15 +271,15 @@ function comprarCarrito() {
             asideCompra.classList.remove("active");
             asideEnvio.classList.add("active");
         }
-      });
+    });
 
 }
 
-//Finalizar compra
+//Continuar compra formulario
 botonFormulario.addEventListener("click", finalizarCompra);
 
 function finalizarCompra() {
-
+    // Elementos HTML de formulario
     const nombre = document.getElementById("nombre-formulario").value;
     const apellido = document.getElementById("apellido-formulario").value;
     const numero = document.getElementById("numero-formulario").value;
@@ -312,6 +314,10 @@ function finalizarCompra() {
     contenedorTarjeta.classList.remove("disabled");
 }
 
+
+//Finalizar compra Tarjeta
+function manejarTarjeta() {
+    // Elementos HTML de tarjeta
     const inputNumeroTarjeta = document.querySelector("#input-tarjeta-numero");
     const inputNombreTarjeta = document.querySelector("#input-tarjeta-nombre");
     const inputMesTarjeta = document.querySelector("#input-tarjeta-mes");
@@ -323,6 +329,102 @@ function finalizarCompra() {
     const tarjetaYear = document.querySelector("#exp-year-tarjeta");
     const tarjetaCvv = document.querySelector("#cvv-tarjeta-trasera");
 
-    inputNumeroTarjeta.addEventListener("input", () => {
+ 
+    // Comienzo eventos entre tarjeta y su formulario
+    inputNombreTarjeta.addEventListener("input", () => {
         tarjetaNombre.innerText = inputNombreTarjeta.value
+
+        if (inputNombreTarjeta.value.length === 0) {
+            tarjetaNombre.innerText = "Ingresar nombre y apellido"
+        }
     })
+
+    var cleave = new Cleave('#input-tarjeta-numero', {
+        creditCard: true,
+    });
+
+
+    inputNumeroTarjeta.addEventListener("input", () => {
+        tarjetaNumero.innerText = inputNumeroTarjeta.value
+
+        if (inputNumeroTarjeta.value.length === 0) {
+            tarjetaNumero.innerText = "#### #### #### ####"
+        }
+    })
+
+
+    // Opciones para eleccion mes
+    function opcionesMes() {
+        for (let i = 1; i <= 12; i++) {
+            let opciones = document.createElement("option");
+            opciones.value = i;
+            opciones.innerText = i;
+            inputMesTarjeta.appendChild(opciones);
+        }
+    }
+    opcionesMes();   
+    // Opciones para eleccion year
+    const yearAhora = new Date().getFullYear();
+    function opcionesYear() {
+        for (let i = yearAhora; i <= yearAhora + 9; i++) {
+            let opciones = document.createElement("option");
+            opciones.value = i;
+            opciones.innerHTML = i;
+            inputYearTarjeta.appendChild(opciones);
+        }
+    }
+    opcionesYear();
+    
+    inputMesTarjeta.addEventListener("change", () => {
+        tarjetaMes.innerText = inputMesTarjeta.value
+
+        if (inputMesTarjeta.value.length === 0) {
+            tarjetaMes.innerText = "MM"
+        }
+    })
+
+    inputYearTarjeta.addEventListener("change", () => {
+        tarjetaYear.innerText = inputYearTarjeta.value
+
+        if (inputYearTarjeta.value.length === 0) {
+            tarjetaYear.innerText = "AA"
+        }
+    })
+
+    inputCvvTarjeta.addEventListener("input", () => {
+        tarjetaCvv.innerText = inputCvvTarjeta.value
+
+        if (inputCvvTarjeta.value.length === 0) {
+            tarjetaCvv.innerText = "###"
+        }
+    })
+
+    // Giros de tarjeta en CVV("mayor seguridad")
+    inputCvvTarjeta.addEventListener("mouseenter", () => {
+        tarjetaDelantera.style.transform = "perspective(1000px) rotateY(-180deg)";
+        tarjetaTrasera.style.transform = "perspective(1000px) rotateY(0deg)";
+    })
+
+    inputCvvTarjeta.addEventListener("mouseleave", () => {
+        tarjetaDelantera.style.transform = "perspective(1000px) rotateY(0deg)";
+        tarjetaTrasera.style.transform = "perspective(1000px) rotateY(180deg)";
+    })
+
+    // Actualizacion de clases
+    botonTarjeta.addEventListener("click", () => {
+        contenedorCarritoVacio.classList.add("disabled");
+        contenedorCarritoProductos.classList.add("disabled");
+        contenedorCarritoAcciones.classList.add("disabled");
+        contenedorCarritoComprado.classList.remove("disabled");
+        formulario.classList.add("disabled");
+        contenedorTarjeta.classList.add("disabled");
+        asideCompra.classList.add("active");
+        asideEnvio.classList.remove("active");
+
+        productosEnCarrito.length = 0;
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+
+    })
+}
+
+manejarTarjeta();

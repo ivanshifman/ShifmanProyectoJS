@@ -99,31 +99,31 @@
                 </div>
             </form>
 
-            <div class="contenedor-tarjeta" id="contenedor-tarjeta">
+            <div class="contenedor-tarjeta disabled" id="contenedor-tarjeta">
 
                 <div class="contenedor-tarjetita">
-                    <div class="tarjeta-delantera">
+                    <div class="tarjeta-delantera" id="tarjeta-delantera">
                         <div class="imagen-tarjeta-delantera">
                             <img src="./img/tarjeta/chip.webp" alt="chip">
                             <img src="./img/tarjeta/visa.webp" alt="visa">
                         </div>
-                        <div class="numero-tarjeta-delantera" id="numero-tarjeta-delantera">################</div>
+                        <div class="numero-tarjeta-delantera" id="numero-tarjeta-delantera">#### #### #### ####</div>
                         <div class="flex-tarjeta-delantera">
                             <div class="flex-tarjeta-delantera-chico">
                                 <span>Nombre y apellido</span>
-                                <p class="nombre-tarjeta-delantera" id="nombre-tarjeta-delantera"></p>
+                                <p class="nombre-tarjeta-delantera" id="nombre-tarjeta-delantera">Ingresar nombre y apellido</p>
                             </div>
                             <div class="flex-tarjeta-delantera-chico">
                                 <span>Exp</span>
                                 <div class="exp-tarjeta-delantera">
-                                    <span class="exp-mes-tarjeta" id="exp-mes-tarjeta">MM</span>/
+                                    <span class="exp-mes-tarjeta" id="exp-mes-tarjeta">MM </span>/
                                     <span class="exp-year-tarjeta" id="exp-year-tarjeta">AA</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="tarjeta-trasera">
+                    <div class="tarjeta-trasera" id="tarjeta-trasera">
                         <div class="barra-tarjeta-trasera"></div>
                         <div class="seguro-tarjeta-trasera">
                             <span>CVV</span>
@@ -137,27 +137,31 @@
                 <form class="formulario-tarjeta">
                     <div class="tarjeta-input">
                         <label for="input-tarjeta-numero">Numero de tarjeta:</label>
-                        <input type="tel" id="input-tarjeta-numero">
+                        <input type="tel" id="input-tarjeta-numero" placeholder="Numero de tarjeta" required>
                     </div>
                     <div class="tarjeta-input">
                         <label for="input-tarjeta-nombre">Nombre y apellido:</label>
-                        <input type="text" id="input-tarjeta-nombre">
+                        <input type="text" id="input-tarjeta-nombre" placeholder="Nombre y Apellido" required>
                     </div>
                     <div class="tarjeta-input-chico">
                         <div class="tarjeta-input">
                             <label for="input-tarjeta-mes">MM:</label>
-                            <select id="input-tarjeta-mes"></select>
+                            <select id="input-tarjeta-mes">
+                                <option value="MM" selected disabled>MM</option>
+                            </select>
                         </div>
                         <div class="tarjeta-input">
                             <label for="input-tarjeta-year">AA:</label>
-                            <select id="input-tarjeta-year"></select>
+                            <select id="input-tarjeta-year">
+                                <option value="AA" selected disabled>AA</option>
+                            </select>
                         </div>
                         <div class="tarjeta-input">
-                            <label for="input-tarjeta-seguro">CCV:</label>
-                            <input type="tel" maxlength="3" id="input-tarjeta-seguro">
+                            <label for="input-tarjeta-seguro">CVV:</label>
+                            <input type="tel" maxlength="3" id="input-tarjeta-seguro" placeholder="CVV" required>
                         </div>
                     </div>
-                    <button class="boton-tarjeta" type="submit" id="boton-tarjeta">Comprar</button>
+                    <button class="boton-tarjeta" type="button" id="boton-tarjeta">Comprar</button>
                 </form>
 
             </div>
@@ -167,6 +171,7 @@
 
     </div>
     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/temadark.js"></script>

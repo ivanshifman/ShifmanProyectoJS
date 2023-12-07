@@ -642,6 +642,180 @@ body.dark .formulario-div label{
     background-color: var(--color-greentwo);
 }
 
+.contenedor-tarjetita {
+    margin-bottom: -150px;
+    position: relative;
+    height: 27vh;
+    width: 35vw;
+}
+
+.tarjeta-delantera {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--color-green);
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    padding: 1.4rem;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .4s ease-out;
+}
+
+.imagen-tarjeta-delantera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -2rem;
+}
+
+.imagen-tarjeta-delantera img {
+    width: 80px;
+}
+
+.numero-tarjeta-delantera {
+    padding: 1.2rem 0;
+    font-size: 1.3rem;
+    color: var(--color-darkbody);
+}
+
+.flex-tarjeta-delantera {
+    display: flex;
+}
+
+.flex-tarjeta-delantera-chico:nth-child(1) {
+    margin-right: auto;
+}
+
+.flex-tarjeta-delantera-chico {
+    font-size: .9rem;
+    color: var(--color-darkbody);
+}
+
+.tarjeta-trasera {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-green);
+    border-radius: 1rem;
+    padding: 1.4rem;
+    text-align: right;
+    backface-visibility: hidden;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .4s ease-out;
+}
+
+.barra-tarjeta-trasera {
+    background-color: var(--color-black);
+    width: 100%;
+    margin: .6rem 0;
+    height: 2rem;
+}
+
+.seguro-tarjeta-trasera {
+    padding: 0 .6rem;
+}
+
+.seguro-tarjeta-trasera span {
+    color: var(--color-darkbody);
+    font-size: .9rem;
+}
+
+.cvv-tarjeta-trasera {
+    height: 2.3rem;
+    padding: .8rem;
+    margin-top: .5rem;
+    background-color: var(--color-graytwo);
+    color: var(--color-darkbody);
+    border-radius: .5rem;
+    width: 100%;
+}
+
+.seguro-tarjeta-trasera img {
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+.contenedor-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    background-color: transparent;
+    min-height: 70vh;
+    min-width: 50vw;
+}
+
+.formulario-tarjeta {
+    background-color: var(--color-graytwo);
+    margin-top: 2rem;
+    border: 3px solid var(--color-black);
+    border-radius: 1rem;
+    padding: 2.4rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    height: 100%;
+    padding-top: 160px;
+}
+
+.tarjeta-input {
+    margin-top: .7rem;
+}
+
+.tarjeta-input label {
+    display: block;
+    color: var(--color-black);
+    padding-bottom: .5rem;
+}
+
+.tarjeta-input input, .tarjeta-input select {
+    width: 100%;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--color-black);
+    color: var(--color-gray);
+}
+
+.tarjeta-input-chico {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.tarjeta-input-chico .tarjeta-input {
+    flex: 1 1 150px;
+}
+
+.boton-tarjeta {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: .6rem;
+    background-color: var(--color-green);
+    color: var(--color-black);
+    box-shadow: 0 0 20px var(--color-greentwo);
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: .3s ease all;
+}
+
+.boton-tarjeta:hover {
+    background-color: var(--color-greentwo);
+}
+
 .disabled {
     display: none;
 }

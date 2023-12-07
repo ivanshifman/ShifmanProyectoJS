@@ -99,6 +99,69 @@
                 </div>
             </form>
 
+            <div class="contenedor-tarjeta">
+
+                <div class="contenedor-tarjetita">
+                    <div class="tarjeta-delantera">
+                        <div class="imagen-tarjeta-delantera">
+                            <img src="./img/tarjeta/chip.webp" alt="chip">
+                            <img src="./img/tarjeta/visa.webp" alt="visa">
+                        </div>
+                        <div class="numero-tarjeta-delantera">################</div>
+                        <div class="flex-tarjeta-delantera">
+                            <div class="flex-tarjeta-delantera-chico">
+                                <span>Nombre y apellido</span>
+                                <p class="nombre-tarjeta-delantera">Nombre</p>
+                            </div>
+                            <div class="flex-tarjeta-delantera-chico">
+                                <span>Exp</span>
+                                <div class="exp-tarjeta-delantera">
+                                    <span class="exp-mes-tarjeta">MM</span>
+                                    <span class="exp-year-tarjeta">AA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tarjeta-trasera">
+                        <div class="barra-tarjeta-trasera"></div>
+                        <div class="seguro-tarjeta-trasera">
+                            <span>CVV</span>
+                            <div class="cvv-tarjeta-trasera"></div>
+                            <img src="./img/tarjeta/visa.webp" alt="visa">
+                        </div>
+                    </div>
+
+                </div>
+
+                <form class="formulario-tarjeta">
+                    <div class="tarjeta-input">
+                        <label for="input-tarjeta-numero">Numero de tarjeta:</label>
+                        <input type="tel" id="input-tarjeta-numero">
+                    </div>
+                    <div class="tarjeta-input">
+                        <label for="input-tarjeta-nombre">Nombre y apellido:</label>
+                        <input type="text" id="input-tarjeta-nombre">
+                    </div>
+                    <div class="tarjeta-input-chico">
+                        <div class="tarjeta-input">
+                            <label for="input-tarjeta-mes">MM:</label>
+                            <select id="input-tarjeta-mes"></select>
+                        </div>
+                        <div class="tarjeta-input">
+                            <label for="input-tarjeta-year">AA:</label>
+                            <select id="input-tarjeta-year"></select>
+                        </div>
+                        <div class="tarjeta-input">
+                            <label for="input-tarjeta-seguro">CCV:</label>
+                            <input type="tel" maxlength="3" id="input-tarjeta-seguro">
+                        </div>
+                    </div>
+                    <button class="boton-tarjeta" type="submit">Comprar</button>
+                </form>
+            </div>
+
+
         </main>
 
     </div>

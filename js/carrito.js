@@ -171,30 +171,31 @@ function sumarCantidad(e) {
 // Resta productos dentro del carrito
 function restarCantidad(e) {
 
-    Toastify({
-        text: "Producto eliminado",
-        duration: 2000,
-        close: true,
-        gravity: "top",
-        position: "right",
-        stopOnFocus: true,
-        style: {
-            background: "linear-gradient(to top, rgb(227, 33, 33), rgb(181, 2, 2))",
-            borderRadius: "2rem",
-            textTransform: "uppercase",
-            fontSize: ".8rem"
-        },
-        offset: {
-            x: "1.5rem",
-            y: "1.5rem"
-        },
-        onClick: function () { }
-    }).showToast();
-
     const idProducto = e.currentTarget.dataset.id;
     const producto = productosEnCarrito.find(p => p.id === idProducto);
 
     if (producto && producto.cantidad > 1) {
+
+        Toastify({
+            text: "Producto eliminado",
+            duration: 2000,
+            close: true,
+            gravity: "top",
+            position: "right",
+            stopOnFocus: true,
+            style: {
+                background: "linear-gradient(to top, rgb(227, 33, 33), rgb(181, 2, 2))",
+                borderRadius: "2rem",
+                textTransform: "uppercase",
+                fontSize: ".8rem"
+            },
+            offset: {
+                x: "1.5rem",
+                y: "1.5rem"
+            },
+            onClick: function () { }
+        }).showToast();
+
         producto.cantidad--;
         cargarProductosCarrito();
         localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));

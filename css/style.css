@@ -655,7 +655,7 @@ body.dark .formulario-div label{
     width: 100%;
     top: 0;
     left: 0;
-    background-color: var(--color-green);
+    background: linear-gradient(to left, rgba(71, 206, 243, 0.868), rgba(52, 14, 243, 0.89));
     border-radius: 1rem;
     backface-visibility: hidden;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
@@ -700,7 +700,7 @@ body.dark .formulario-div label{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: var(--color-green);
+    background: linear-gradient(to left, rgba(71, 206, 243, 0.868), rgba(52, 14, 243, 0.89));
     border-radius: 1rem;
     padding: 1.4rem;
     text-align: right;
@@ -761,6 +761,11 @@ body.dark .formulario-div label{
     width: 70%;
     height: 100%;
     padding-top: 160px;
+}
+
+body.dark .formulario-tarjeta {
+    box-shadow: 0 0 20px rgba(7, 198, 7, 0.529);
+    border: 3px solid var(--color-green);
 }
 
 .tarjeta-input {

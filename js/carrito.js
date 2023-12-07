@@ -267,6 +267,15 @@ function finalizarCompra() {
         return;
     }
 
+    function esNumeroValido(numero) {
+        return !isNaN(numero) && !isNaN(parseFloat(numero)) && numero.length >= 8;
+    }
+
+    if (!esNumeroValido(numero)) {
+        mensajeValidacion.innerText = "El campo 'Número' debe contener un valor numérico. (8 o más dígitos).";
+        return;
+    }
+
     productosEnCarrito.length = 0;
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
 

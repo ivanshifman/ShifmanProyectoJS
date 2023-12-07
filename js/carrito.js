@@ -17,6 +17,8 @@ const contenedorTotal = document.querySelector("#total");
 const botonComprar = document.querySelector("#carrito-acciones-comprar");
 const formulario = document.querySelector(".formulario");
 const botonFormulario = document.querySelector(".boton-formulario");
+const contenedorTarjeta = document.querySelector("#contenedor-tarjeta");
+const botonTarjeta = document.querySelector("#boton-tarjeta");
 
 
 // Carga de productos al carrito
@@ -262,6 +264,7 @@ function comprarCarrito() {
             contenedorCarritoProductos.classList.add("disabled");
             contenedorCarritoAcciones.classList.add("disabled");
             contenedorCarritoComprado.classList.add("disabled");
+            contenedorTarjeta.classList.add("disabled");
             formulario.classList.remove("disabled");
             asideCompra.classList.remove("active");
             asideEnvio.classList.add("active");
@@ -304,8 +307,22 @@ function finalizarCompra() {
     contenedorCarritoVacio.classList.add("disabled");
     contenedorCarritoProductos.classList.add("disabled");
     contenedorCarritoAcciones.classList.add("disabled");
-    contenedorCarritoComprado.classList.remove("disabled");
+    contenedorCarritoComprado.classList.add("disabled");
     formulario.classList.add("disabled");
-    asideCompra.classList.add("active");
-    asideEnvio.classList.remove("active");
+    contenedorTarjeta.classList.remove("disabled");
 }
+
+    const inputNumeroTarjeta = document.querySelector("#input-tarjeta-numero");
+    const inputNombreTarjeta = document.querySelector("#input-tarjeta-nombre");
+    const inputMesTarjeta = document.querySelector("#input-tarjeta-mes");
+    const inputYearTarjeta = document.querySelector("#input-tarjeta-year");
+    const inputCvvTarjeta = document.querySelector("#input-tarjeta-seguro");
+    const tarjetaNumero = document.querySelector("#numero-tarjeta-delantera");
+    const tarjetaNombre = document.querySelector("#nombre-tarjeta-delantera");
+    const tarjetaMes = document.querySelector("#exp-mes-tarjeta");
+    const tarjetaYear = document.querySelector("#exp-year-tarjeta");
+    const tarjetaCvv = document.querySelector("#cvv-tarjeta-trasera");
+
+    inputNumeroTarjeta.addEventListener("input", () => {
+        tarjetaNombre.innerText = inputNombreTarjeta.value
+    })

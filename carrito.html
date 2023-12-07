@@ -99,7 +99,7 @@
                 </div>
             </form>
 
-            <div class="contenedor-tarjeta">
+            <div class="contenedor-tarjeta" id="contenedor-tarjeta">
 
                 <div class="contenedor-tarjetita">
                     <div class="tarjeta-delantera">
@@ -107,17 +107,17 @@
                             <img src="./img/tarjeta/chip.webp" alt="chip">
                             <img src="./img/tarjeta/visa.webp" alt="visa">
                         </div>
-                        <div class="numero-tarjeta-delantera">################</div>
+                        <div class="numero-tarjeta-delantera" id="numero-tarjeta-delantera">################</div>
                         <div class="flex-tarjeta-delantera">
                             <div class="flex-tarjeta-delantera-chico">
                                 <span>Nombre y apellido</span>
-                                <p class="nombre-tarjeta-delantera">Nombre</p>
+                                <p class="nombre-tarjeta-delantera" id="nombre-tarjeta-delantera"></p>
                             </div>
                             <div class="flex-tarjeta-delantera-chico">
                                 <span>Exp</span>
                                 <div class="exp-tarjeta-delantera">
-                                    <span class="exp-mes-tarjeta">MM</span>
-                                    <span class="exp-year-tarjeta">AA</span>
+                                    <span class="exp-mes-tarjeta" id="exp-mes-tarjeta">MM</span>/
+                                    <span class="exp-year-tarjeta" id="exp-year-tarjeta">AA</span>
                                 </div>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
                         <div class="barra-tarjeta-trasera"></div>
                         <div class="seguro-tarjeta-trasera">
                             <span>CVV</span>
-                            <div class="cvv-tarjeta-trasera"></div>
+                            <div class="cvv-tarjeta-trasera" id="cvv-tarjeta-trasera"></div>
                             <img src="./img/tarjeta/visa.webp" alt="visa">
                         </div>
                     </div>
@@ -157,8 +157,9 @@
                             <input type="tel" maxlength="3" id="input-tarjeta-seguro">
                         </div>
                     </div>
-                    <button class="boton-tarjeta" type="submit">Comprar</button>
+                    <button class="boton-tarjeta" type="submit" id="boton-tarjeta">Comprar</button>
                 </form>
+
             </div>
 
 

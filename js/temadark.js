@@ -6,14 +6,14 @@ btnSwitch.addEventListener('click', () => {
     btnSwitch.classList.toggle('active');
 
     if (document.body.classList.contains('dark')) {
-        localStorage.setItem('dark-mode', 'true');
+        localStorage.setItem('modo-oscuro', 'verdadero');
     } else {
-        localStorage.setItem('dark-mode', 'false');
+        localStorage.setItem('modo-oscuro', 'falso');
     }
 });
 
 //Actualizacion tema oscuro
-if (localStorage.getItem('dark-mode') === 'true') {
+if (localStorage.getItem('modo-oscuro') === 'verdadero') {
     document.body.classList.add('dark');
     btnSwitch.classList.add('active');
 } else {

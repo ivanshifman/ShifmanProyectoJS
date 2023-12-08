@@ -541,6 +541,7 @@ body.dark .swal2-close {
     color: var(--color-white) !important;
     border: 2px solid var(--color-greenthree) !important;
     font-size: .7rem;
+    box-shadow: none !important;
 }
 
 .confirmarAlerta:hover {
@@ -553,6 +554,7 @@ body.dark .swal2-close {
     color: var(--color-white) !important;
     border: 2px solid var(--color-red) !important;
     font-size: .7rem;
+    box-shadow: none !important;
 }
 
 .cancelarAlerta:hover {

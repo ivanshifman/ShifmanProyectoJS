@@ -436,9 +436,8 @@ function manejarTarjeta() {
             title: "Muchas gracias por su compra.",
             icon: "success",
             html: `Total a pagar: $${productosEnCarrito.reduce((acumulador, producto) => acumulador + (producto.cantidad * producto.precio), 0)}.`,
-            showCloseButton: true,
             focusConfirm: false,
-            confirmButtonText: "Aceptar",
+            confirmButtonText: "Continuar",
             customClass: {
                 title: 'tituloAlerta',
                 htmlContainer: 'textoAlerta',

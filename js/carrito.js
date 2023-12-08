@@ -260,9 +260,7 @@ function comprarCarrito() {
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            productosEnCarrito.length = 0;
-            localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-
+            
             contenedorCarritoVacio.classList.add("disabled");
             contenedorCarritoProductos.classList.add("disabled");
             contenedorCarritoAcciones.classList.add("disabled");
@@ -304,15 +302,35 @@ function finalizarCompra() {
         return;
     }
 
-    productosEnCarrito.length = 0;
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    Swal.fire({
+        title: "¿Estás seguro?",
+        icon: "info",
+        html: `Por favor ingresar tarjeta de crédito/débito`,
+        showCloseButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: "Aceptar",
+        cancelButtonText: "Cancelar",
+        customClass: {
+            title: 'tituloAlerta',
+            htmlContainer: 'textoAlerta',
+            icon: 'iconoAlertaUno',
+            confirmButton: 'confirmarAlerta',
+            cancelButton: 'cancelarAlerta',
+        }
+    }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            
+            contenedorCarritoVacio.classList.add("disabled");
+            contenedorCarritoProductos.classList.add("disabled");
+            contenedorCarritoAcciones.classList.add("disabled");
+            contenedorCarritoComprado.classList.add("disabled");
+            formulario.classList.add("disabled");
+            contenedorTarjeta.classList.remove("disabled");
+        }
+    });
 
-    contenedorCarritoVacio.classList.add("disabled");
-    contenedorCarritoProductos.classList.add("disabled");
-    contenedorCarritoAcciones.classList.add("disabled");
-    contenedorCarritoComprado.classList.add("disabled");
-    formulario.classList.add("disabled");
-    contenedorTarjeta.classList.remove("disabled");
 }
 
 
@@ -330,7 +348,7 @@ function manejarTarjeta() {
     const tarjetaYear = document.querySelector("#exp-year-tarjeta");
     const tarjetaCvv = document.querySelector("#cvv-tarjeta-trasera");
 
- 
+
     // Comienzo eventos entre tarjeta y su formulario
     inputNombreTarjeta.addEventListener("input", () => {
         tarjetaNombre.innerText = inputNombreTarjeta.value
@@ -363,7 +381,7 @@ function manejarTarjeta() {
             inputMesTarjeta.appendChild(opciones);
         }
     }
-    opcionesMes();   
+    opcionesMes();
     // Opciones para eleccion year
     const yearAhora = new Date().getFullYear();
     function opcionesYear() {
@@ -375,7 +393,7 @@ function manejarTarjeta() {
         }
     }
     opcionesYear();
-    
+
     inputMesTarjeta.addEventListener("change", () => {
         tarjetaMes.innerText = inputMesTarjeta.value
 
@@ -412,20 +430,39 @@ function manejarTarjeta() {
     })
 
     // Actualizacion de clases
-    botonTarjeta.addEventListener("click", () => {
-        contenedorCarritoVacio.classList.add("disabled");
-        contenedorCarritoProductos.classList.add("disabled");
-        contenedorCarritoAcciones.classList.add("disabled");
-        contenedorCarritoComprado.classList.remove("disabled");
-        formulario.classList.add("disabled");
-        contenedorTarjeta.classList.add("disabled");
-        asideCompra.classList.add("active");
-        asideEnvio.classList.remove("active");
 
-        productosEnCarrito.length = 0;
-        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    botonTarjeta.addEventListener("click", () => {
+        Swal.fire({
+            title: "Muchas gracias por su compra.",
+            icon: "success",
+            html: `Total a pagar: $${productosEnCarrito.reduce((acumulador, producto) => acumulador + (producto.cantidad * producto.precio), 0)}.`,
+            showCloseButton: true,
+            focusConfirm: false,
+            confirmButtonText: "Aceptar",
+            customClass: {
+                title: 'tituloAlerta',
+                htmlContainer: 'textoAlerta',
+                icon: 'iconoAlertaUno',
+                confirmButton: 'confirmarAlerta',
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                contenedorCarritoVacio.classList.add("disabled");
+                contenedorCarritoProductos.classList.add("disabled");
+                contenedorCarritoAcciones.classList.add("disabled");
+                contenedorCarritoComprado.classList.remove("disabled");
+                formulario.classList.add("disabled");
+                contenedorTarjeta.classList.add("disabled");
+                asideCompra.classList.add("active");
+                asideEnvio.classList.remove("active");
+
+                productosEnCarrito.length = 0;
+                localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+            }
+        });
 
     })
+
 }
 
 manejarTarjeta();

@@ -55,11 +55,11 @@ function cargarProductosCarrito() {
                 </div>
                 <div class="carrito-producto-precio">
                     <small>Precio</small>
-                    <p>$${producto.precio}</p>
+                    <p>US$${producto.precio}</p>
                 </div>
                 <div class="carrito-producto-subtotal">
                     <small>Subtotal</small>
-                    <p>$${producto.precio * producto.cantidad}</p>
+                    <p>US$${producto.precio * producto.cantidad}</p>
                 </div>
                 <button class="carrito-producto-eliminar" id="${producto.id}"><i class="bi bi-trash-fill"></i></button>
             `;
@@ -235,7 +235,7 @@ function vaciarCarrito() {
 // Actualizar valor total
 function actualizarTotal() {
     const totalPrecio = productosEnCarrito.reduce((acumulador, producto) => acumulador + (producto.precio * producto.cantidad), 0);
-    contenedorTotal.innerText = `$${totalPrecio}`;
+    contenedorTotal.innerText = `US$${totalPrecio}`;
 }
 
 // Boton comprar
@@ -260,7 +260,7 @@ function comprarCarrito() {
         }
     }).then((result) => {
         if (result.isConfirmed) {
-            
+
             contenedorCarritoVacio.classList.add("disabled");
             contenedorCarritoProductos.classList.add("disabled");
             contenedorCarritoAcciones.classList.add("disabled");
@@ -319,9 +319,8 @@ function finalizarCompra() {
             cancelButton: 'cancelarAlerta',
         }
     }).then((result) => {
-        /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
-            
+
             contenedorCarritoVacio.classList.add("disabled");
             contenedorCarritoProductos.classList.add("disabled");
             contenedorCarritoAcciones.classList.add("disabled");
@@ -429,38 +428,44 @@ function manejarTarjeta() {
         tarjetaTrasera.style.transform = "perspective(1000px) rotateY(180deg)";
     })
 
-    // Actualizacion de clases
+    // Actualizaciones mas fetch para precio Argentina con impuestos(dolar solidario)
+    fetch("https://criptoya.com/api/dolar")
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.solidario);
+            // Precios finales y ultimas actualizaciones
+            botonTarjeta.addEventListener("click", () => {
 
-    botonTarjeta.addEventListener("click", () => {
-        Swal.fire({
-            title: "Muchas gracias por su compra.",
-            icon: "success",
-            html: `Total a pagar: $${productosEnCarrito.reduce((acumulador, producto) => acumulador + (producto.cantidad * producto.precio), 0)}.`,
-            focusConfirm: false,
-            confirmButtonText: "Continuar",
-            customClass: {
-                title: 'tituloAlerta',
-                htmlContainer: 'textoAlerta',
-                icon: 'iconoAlertaUno',
-                confirmButton: 'confirmarAlerta',
-            }
-        }).then((result) => {
-            if (result.isConfirmed) {
-                contenedorCarritoVacio.classList.add("disabled");
-                contenedorCarritoProductos.classList.add("disabled");
-                contenedorCarritoAcciones.classList.add("disabled");
-                contenedorCarritoComprado.classList.remove("disabled");
-                formulario.classList.add("disabled");
-                contenedorTarjeta.classList.add("disabled");
-                asideCompra.classList.add("active");
-                asideEnvio.classList.remove("active");
+                Swal.fire({
+                    title: "Muchas gracias por su compra.",
+                    icon: "success",
+                    html: `Total a pagar:<br> US$${productosEnCarrito.reduce((acumulador, producto) => acumulador + (producto.cantidad * producto.precio), 0)}<br>Total(solo Argentina):<br> $${productosEnCarrito.reduce((acumulador, producto) => acumulador + Math.round(producto.cantidad * (data.solidario * producto.precio)), 0)}<br> <p>Precio con impuestos(ARG)</p>`,
+                    focusConfirm: false,
+                    confirmButtonText: "Continuar",
+                    customClass: {
+                        title: 'tituloAlerta',
+                        htmlContainer: 'textoAlerta',
+                        icon: 'iconoAlertaUno',
+                        confirmButton: 'confirmarAlerta',
+                    }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        contenedorCarritoVacio.classList.add("disabled");
+                        contenedorCarritoProductos.classList.add("disabled");
+                        contenedorCarritoAcciones.classList.add("disabled");
+                        contenedorCarritoComprado.classList.remove("disabled");
+                        formulario.classList.add("disabled");
+                        contenedorTarjeta.classList.add("disabled");
+                        asideCompra.classList.add("active");
+                        asideEnvio.classList.remove("active");
 
-                productosEnCarrito.length = 0;
-                localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-            }
-        });
+                        productosEnCarrito.length = 0;
+                        localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+                    }
+                });
 
-    })
+            })
+        })
 
 }
 

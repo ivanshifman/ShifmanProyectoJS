@@ -6,7 +6,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 4500
+        "precio": 45
     },
     {
         "id": "bateria-02",
@@ -15,7 +15,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 3000
+        "precio": 30
     },
     {
         "id": "bateria-03",
@@ -24,7 +24,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 2000
+        "precio": 20
     },
     {
         "id": "bateria-04",
@@ -33,7 +33,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 2000
+        "precio": 25
     },
     {
         "id": "bateria-05",
@@ -42,7 +42,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 4500
+        "precio": 45
     },
     {
         "id": "bateria-06",
@@ -51,7 +51,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 3200
+        "precio": 35
     },
     {
         "id": "bateria-07",
@@ -60,7 +60,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 1600
+        "precio": 15
     },
     {
         "id": "bateria-08",
@@ -69,7 +69,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 3050
+        "precio": 30
     },
     {
         "id": "bateria-09",
@@ -78,7 +78,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 2000
+        "precio": 20
     },
     {
         "id": "bateria-10",
@@ -87,7 +87,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 1550
+        "precio": 15
     },
     {
         "id": "bateria-11",
@@ -96,7 +96,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 5000
+        "precio": 50
     },
     {
         "id": "bateria-12",
@@ -105,7 +105,7 @@
         "categoria": { 
             "nombre": "Baterias", 
             "id": "baterias" },
-        "precio": 22700
+        "precio": 120
     },
     {
         "id": "guitarra-01",
@@ -114,7 +114,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 6700
+        "precio": 65
     },
     {
         "id": "guitarra-02",
@@ -123,7 +123,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 4000
+        "precio": 40
     },
     {
         "id": "guitarra-03",
@@ -132,7 +132,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 3800
+        "precio": 30
     },
     {
         "id": "guitarra-04",
@@ -141,7 +141,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 6700
+        "precio": 60
     },
     {
         "id": "guitarra-05",
@@ -150,7 +150,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 4500
+        "precio": 45
     },
     {
         "id": "guitarra-06",
@@ -159,7 +159,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 3500
+        "precio": 35
     },
     {
         "id": "guitarra-07",
@@ -168,7 +168,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 6770
+        "precio": 65
     },
     {
         "id": "guitarra-08",
@@ -177,7 +177,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 3800
+        "precio": 30
     },
     {
         "id": "guitarra-09",
@@ -186,7 +186,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 2300
+        "precio": 20
     },
     {
         "id": "guitarra-10",
@@ -195,7 +195,7 @@
         "categoria": { 
             "nombre": "Guitarras", 
             "id": "guitarras" },
-        "precio": 3300
+        "precio": 30
     },
     {
         "id": "piano-01",
@@ -204,7 +204,7 @@
         "categoria": { 
             "nombre": "Pianos", 
             "id": "pianos" },
-        "precio": 8800
+        "precio": 80
     },
     {
         "id": "piano-02",
@@ -213,7 +213,7 @@
         "categoria": { 
             "nombre": "Pianos", 
             "id": "pianos" },
-        "precio": 7800
+        "precio": 70
     },
     {
         "id": "piano-03",
@@ -222,7 +222,7 @@
         "categoria": { 
             "nombre": "Pianos", 
             "id": "pianos" },
-        "precio": 8340
+        "precio": 80
     },
     {
         "id": "piano-04",
@@ -231,7 +231,7 @@
         "categoria": { 
             "nombre": "Pianos", 
             "id": "pianos" },
-        "precio": 7100
+        "precio": 70
     },
     {
         "id": "piano-05",
@@ -240,7 +240,7 @@
         "categoria": { 
             "nombre": "Pianos", 
             "id": "pianos" },
-        "precio": 2200
+        "precio": 20
     },
     {
         "id": "piano-06",
@@ -249,7 +249,7 @@
         "categoria": { 
             "nombre": "Pianos", 
             "id": "pianos" },
-        "precio": 4700
+        "precio": 40
     },
     {
         "id": "piano-07",
@@ -258,7 +258,7 @@
         "categoria": { 
             "nombre": "Pianos", 
             "id": "pianos" },
-        "precio": 4600
+        "precio": 40
     },
     {
         "id": "piano-08",
@@ -267,7 +267,7 @@
         "categoria": { 
             "nombre": "Pianos", 
             "id": "pianos" },
-        "precio": 5600
+        "precio": 50
     },
     {
         "id": "viento-01",
@@ -276,7 +276,7 @@
         "categoria": { 
             "nombre": "Vientos", 
             "id": "vientos" },
-        "precio": 1900
+        "precio": 10
     },
     {
         "id": "viento-02",
@@ -285,7 +285,7 @@
         "categoria": { 
             "nombre": "Vientos", 
             "id": "vientos" },
-        "precio": 2300
+        "precio": 20
     },
     {
         "id": "viento-03",
@@ -294,7 +294,7 @@
         "categoria": { 
             "nombre": "Vientos", 
             "id": "vientos" },
-        "precio": 1200
+        "precio": 10
     },
     {
         "id": "viento-04",
@@ -303,6 +303,6 @@
         "categoria": { 
             "nombre": "Vientos", 
             "id": "vientos" },
-        "precio": 1230
+        "precio": 15
     }
 ]

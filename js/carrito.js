@@ -432,7 +432,7 @@ function manejarTarjeta() {
     fetch("https://criptoya.com/api/dolar")
         .then(response => response.json())
         .then(data => {
-            console.log(data.solidario);
+            console.log("dolar solidario actual " + data.solidario);
             // Precios finales y ultimas actualizaciones
             botonTarjeta.addEventListener("click", () => {
 
@@ -442,6 +442,7 @@ function manejarTarjeta() {
                     html: `Total a pagar:<br> US$${productosEnCarrito.reduce((acumulador, producto) => acumulador + (producto.cantidad * producto.precio), 0)}<br>Total(solo Argentina):<br> $${productosEnCarrito.reduce((acumulador, producto) => acumulador + Math.round(producto.cantidad * (data.solidario * producto.precio)), 0)}<br> <p>Precio con impuestos(ARG)</p>`,
                     focusConfirm: false,
                     confirmButtonText: "Continuar",
+                    allowOutsideClick: false,
                     customClass: {
                         title: 'tituloAlerta',
                         htmlContainer: 'textoAlerta',
